@@ -69,6 +69,7 @@ func main() {
 	// "hey!" cannot read
 	read(f3)
 	f4, _ := openOrCreate("./file/3.txt", false)
+	defer f4.close()
 	// "hey!" can read
 	read(f4)
 }
