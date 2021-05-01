@@ -66,10 +66,10 @@ func main() {
 	f3, _ := openOrCreate("./file/3.txt", true)
 	defer f3.Close()
 	write(f3, "hey!")
-	// "hey!" cannot read
+	// "hey!" cannot be read
 	read(f3)
 	f4, _ := openOrCreate("./file/3.txt", false)
 	defer f4.close()
-	// "hey!" can read
+	// "hey!" can be read
 	read(f4)
 }
